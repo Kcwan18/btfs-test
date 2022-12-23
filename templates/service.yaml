@@ -8,6 +8,7 @@ spec:
   type: {{ .Values.service.type }}
   ports:
     - port: {{ .Values.service.port }}
+    - port: 8080
 
   selector:
     {{- include "btfs-node.selectorLabels" . | nindent 4 }}
