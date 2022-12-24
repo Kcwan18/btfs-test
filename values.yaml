@@ -49,8 +49,13 @@ ingress:
   hosts:
     - host: btfs.gateway.dev.dedrive.io
       paths:
-        - path: /
+        - path: /dashboard
+          port: 5001
           pathType: ImplementationSpecific
+        - path: /btfs
+          port: 8080
+          pathType: ImplementationSpecific
+
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:
