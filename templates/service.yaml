@@ -8,6 +8,8 @@ spec:
   type: {{ .Values.service.type }}
   ports:
     - port: 8080
+      name: test
+      targetPort: 5001
 
   selector:
     {{- include "btfs-node.selectorLabels" . | nindent 4 }}
